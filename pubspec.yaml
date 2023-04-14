@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   flutter_wemap_sdk:
+#    path: ../flutter_wemap_sdk
     git:
       url: https://github.com/wemap/flutter_wemap_sdk.git
       ref: master

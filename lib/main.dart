@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:sample_flutter_wemap_inwink/map_switcher.dart';
 
-import 'map.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
-  MyApp({super.key});
-
+  const MyApp({super.key});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      scaffoldMessengerKey: _scaffoldKey,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,27 +26,21 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(
-          title: 'Flutter Demo Home Page', scaffoldKey: _scaffoldKey),
+      home: const MyHomePage(title: 'Sample App inwink',),
     );
   }
 }
-
+//
 class MyHomePage extends StatelessWidget {
   final String title;
-  final GlobalKey<ScaffoldMessengerState> scaffoldKey;
-  final mapKey = GlobalKey();
-  MyHomePage({super.key, required this.title, required this.scaffoldKey});
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(title: Text(title)),
+        appBar: AppBar(title: Text(title)),
         body: Container(
             constraints: const BoxConstraints.expand(),
-            child: MapView(
-              key: mapKey,
-              scaffoldMessengerKey: scaffoldKey,
-            )));
+            child: MapSwitcher()));
   }
 }
