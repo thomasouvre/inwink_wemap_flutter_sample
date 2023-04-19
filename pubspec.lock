@@ -80,10 +80,10 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "46168995bbe51cc9fca077247f8d15429e175217"
+      resolved-ref: "32d2ff22c3f2186187a7f7f0cb130806dc6bcc2a"
       url: "https://github.com/wemap/flutter_wemap_sdk.git"
     source: git
-    version: "0.0.2"
+    version: "0.0.3"
   http:
     dependency: "direct main"
     description:
@@ -104,10 +104,10 @@ packages:
     dependency: "direct main"
     description:
       name: intl
-      sha256: a3715e3bc90294e971cb7dc063fbf3cd9ee0ebf8604ffeafabd9e6f16abbdbe6
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.18.0"
+    version: "0.18.1"
   js:
     dependency: transitive
     description:
@@ -129,7 +129,7 @@ packages:
     description:
       path: maplibre_gl_platform_interface
       ref: main
-      resolved-ref: ee82380e456e0cba4130f3ad8e9c8787742a0f79
+      resolved-ref: d0ad0235cdbdc0fb344c1bd29283e331a3f946fa
       url: "https://github.com/m0nac0/flutter-maplibre-gl.git"
     source: git
     version: "0.16.0"
