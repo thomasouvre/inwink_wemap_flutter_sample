@@ -2,8 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_wemap_sdk/flutter_wemap_sdk.dart';
-import 'package:flutter_wemap_sdk/livemap_controller.dart';
+import 'package:flutter_wemap_sdk/flutter_wemap.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 import 'components/header.dart';
@@ -127,8 +126,8 @@ class MapViewState extends State<MapView> {
   Widget build(BuildContext context) {
     const Map<String, dynamic> creationParams = <String, dynamic>{
       // inwink test map
-      "emmid": 22764,
-      "token": "at57ea248c510508.01219386",
+      "emmid": 23664,
+      "token": "WZ5MTHQ7F68NBMQD9CGXLROAY",
     };
 
     var height = MediaQuery.of(context).size.height;
@@ -138,6 +137,7 @@ class MapViewState extends State<MapView> {
         options: creationParams,
         onMapCreated: _onMapCreated,
         onMapReady: () {
+          debugPrint('ready');
           _mapController.setZoom(zoom: 18);
         },
         onMapClick: (dynamic coordinates) {
